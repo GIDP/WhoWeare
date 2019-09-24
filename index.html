@@ -1,0 +1,40 @@
+<!DOCTYPE html5>
+<html>
+    <head>
+            <link rel="stylesheet" href="style.css">
+
+    </head>
+    <body>
+            <nav class="navbar">Title</nav>
+            <div class="container">
+              <div>
+                <input type="button" value="Light/Dark" id="toggle-theme" />
+              </div>
+                <h2 class="title">What is Lorem Ipsum?</h2>
+                <p class="content">Lorem Ipsum is simply dummy text of the printing and typesetting industry...</p>
+            </div>
+            <footer>
+              Copyright 2018
+            </footer>
+            <input type="range" id="darknessSlider" name="darkness" value="1" min="0.3" max="1" step="0.1" />
+<script type="text/javascript">
+const darknessSlider = document.querySelector("#darknessSlider");
+darknessSlider.addEventListener('change', (e)=>{
+  const val = darknessSlider.value
+  document.documentElement.style.setProperty('--theme-darkness', val);
+});
+document.documentElement.style.setProperty('--main-hue', 240);
+const toggleBtn = document.querySelector("#toggle-theme");
+toggleBtn.addEventListener('click', e => {
+  console.log("Switching theme");
+  if(document.documentElement.hasAttribute('theme')){
+    document.documentElement.removeAttribute('theme');
+  }
+  else{
+    document.documentElement.setAttribute('theme', 'dark');
+  }
+});
+
+</script>
+    </body>
+</html>

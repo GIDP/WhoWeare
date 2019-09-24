@@ -1,0 +1,78 @@
+:root{
+    --red-hue: 360;
+    --blue-hue: 240;
+    --green-hue: 120;
+    --main-hue: var(--blue-hue);
+    --nav-bg-color: hsl(var(--main-hue) , 50%, 50%);
+    --nav-text-color: hsl(var(--main-hue), 50%, 10%);
+    --container-bg-color: hsl(var(--main-hue) , 50%, 95%);
+    --content-text-color: hsl(var(--main-hue) , 50%, 50%);
+    --title-color: hsl(var(--main-hue) , 50%, 20%);
+    --footer-bg-color: hsl(var(--main-hue) , 93%, 88%);
+    --button-text-color: hsl(var(--main-hue), 50%, 20%);
+    --theme-darkness: 1;
+    filter: brightness(var(--theme-darkness));
+  }
+:root[theme='dark']
+{
+    --red-hue: 360;
+    --blue-hue: 240;
+    --green-hue: 120;
+    --main-hue: var(--blue-hue);
+    --nav-bg-color: hsl(var(--main-hue), 50%, 90%);
+    --nav-text-color: hsl(var(--main-hue), 50%, 10%);
+    --container-bg-color: hsl(var(--main-hue), 50%, 95%);
+    --content-text-color: hsl(var(--main-hue), 50%, 50%);
+    --title-color: hsl(--main-hue, 50%, 20%);
+    --footer-bg-color: hsl(var(--main-hue), 93%, 88%);
+    --button-text-color: hsl(var(--main-hue), 50%, 20%);
+    filter: invert(1) brightness(var(--theme-darkness));
+    --theme-darkness: 1;
+}
+
+* {
+    margin: 0;
+  }
+  html{
+    height: 100%;
+  }
+  body{
+    height: 100%;
+    font-family: -apple-system, BlinkMacSystemFont"Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
+   "Fira Sans", "Droid Sans", "Helvetica Neue",sans-serif;  
+    display: flex;
+    flex-direction: column;
+  }
+  nav{
+    background: hsl(256, 76%, 32%);
+    padding: 1.3rem;
+    color: hsl(350, 50%, 10%);
+  }
+  .container{
+    flex: 1;
+    background:hsl(266, 28%, 22%);
+    padding: 1rem;
+  }
+  p.content{
+    padding: 0.7rem;
+    font-size: 0.7rem;
+    color: hsl(73, 50%, 50%);
+  }
+  .container h2.title{
+    padding: 1rem;
+    color: hsl(130, 72%, 33%);
+  }
+  footer{
+    background: hsl(258, 24%, 46%);
+    padding: 1rem;
+  }
+  input[type=button] {
+    color:hsl(350, 50%, 20%);
+    padding: 0.3rem;
+    font-size: 1rem;
+  }
+
+div {
+  color: var(--text-color, #000);
+
+}
